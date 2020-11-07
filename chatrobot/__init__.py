@@ -17,7 +17,11 @@ import sys
 from pathlib import Path
 import telethon.utils
 from telethon import TelegramClient
-
+ENV = os.environ.get("ENV", False)
+if ENV:
+    from chatrobot.BotConfig import Config
+else:
+    from local_config import Development as Config
 chatbot = TelegramClient("thechatbot", api_id=Config.API_ID, api_hash=Config.API_HASH)
 
 ENV = os.environ.get("ENV", False)
@@ -35,12 +39,6 @@ if bool(ENV):
         )
     logger = getLogger(__name__)
     
-    
-if ENV:
-    from chatrobot.BotConfig import Config
-else:
-    from local_config import Development as Config
-
 if Config.BOT_TOKEN is None:
     logger.info("BOT_TOKEN is None. Bot Is Quiting")
     sys.exit(1)
