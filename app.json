@@ -9,7 +9,7 @@
     "telegram-chatbot",
     "productivity"
   ],
-  "repository": "https://github.com/starkgang/ChatBot",
+  "repository": "https://github.com/StarkGang/ChatBot",
   "website": "starkgang.ml",
   "success_url": "t.me/FridayOT",
   "env": {
