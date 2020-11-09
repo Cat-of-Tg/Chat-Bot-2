@@ -61,8 +61,8 @@ def start_chatbot(shortname):
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
-        print("Starting Your Assistant Bot.")
-        print("Assistant Sucessfully imported " + shortname)
+        print("Starting Your Chat Bot.")
+        print("ChatBot Sucessfully imported " + shortname)
     else:
         import importlib
         import sys
@@ -78,4 +78,4 @@ def start_chatbot(shortname):
         mod.god_only = god_only()
         spec.loader.exec_module(mod)
         sys.modules["chatrobot.plugins" + shortname] = mod
-        print("Assistants Has imported " + shortname)
+        print("ChatBot Has imported " + shortname)
