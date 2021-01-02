@@ -24,7 +24,6 @@ async def sedlyfsir(event):
     for starkcast in userstobc:
         try:
             await chatbot.send_message(int(starkcast.chat_id), msgtobroadcast)
-            await asyncio.sleep(0.2)
         except Exception as e:
             error_count += 1
     sent_count = error_count - len(userstobc)
