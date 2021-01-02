@@ -13,7 +13,8 @@
 
 from chatrobot.plugins.sql.users_sql import add_me_in_db, his_userid
 from chatrobot.plugins.sql.blacklist_sql import is_he_added
-from telethon import custom, events, Button
+from telethon import custom, events, Button, functions
+import telethon
 from telethon.tl.types import (
     Channel,
     Chat,
