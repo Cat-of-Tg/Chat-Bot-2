@@ -32,7 +32,7 @@ async def all_messages_catcher(event):
         return
     if Config.JMT_ENABLE:
         try:
-            result = await tgbot(
+            result = await chatbot(
                 functions.channels.GetParticipantRequest(
                     channel=Config.JMTC_ID, user_id=event.sender_id
                 )
