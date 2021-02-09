@@ -18,7 +18,7 @@ from chatrobot.plugins.sql.checkuser_sql import get_all_users
 @god_only
 async def sedlyfsir(event):
     msgtobroadcast = event.text
-    msgtobroadcast = msgtobroadcast[9:]
+    msgtobroadcast = event.text.split(" ", maxsplit=1)[1]
     userstobc = get_all_users()
     error_count = 0
     sent_count = 0
